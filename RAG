@@ -1,0 +1,41 @@
+#  Retrieval-Augmented Generation (RAG) System
+
+This project implements a document-based question-answering system using **semantic search** and **LLM-powered synthesis**. Users can upload PDFs, ask natural language questions, and receive answers grounded in document context.
+
+
+##  Objective
+
+Enable intelligent search across multiple documents using:
+-  Embeddings + FAISS for retrieval
+-  LLM (FLAN-T5) for answer synthesis
+
+
+##  Features
+
+-  Upload and parse PDF documents
+-  Chunk text with overlap for semantic coverage
+-  Embed chunks using `sentence-transformers`
+-  Retrieve relevant chunks using FAISS
+-  Synthesize answers using `google/flan-t5-small`
+-  End-to-end pipeline in Google Colab
+
+
+##  Quick Start (Google Colab)
+
+1. Open the notebook in [Google Colab](https://colab.research.google.com/)
+2. Run all cells sequentially
+3. Upload your PDFs when prompted
+4. Enter your query in the final cell
+5. View retrieved chunks and synthesized answer
+
+##  Tech Stack
+
+| Component        | Tool/Library                     |
+|------------------|----------------------------------|
+| Embedding Model  | `all-MiniLM-L6-v2` (SentenceTransformers) |
+| Vector Search    | FAISS (`IndexFlatL2`)            |
+| LLM              | `google/flan-t5-small` (Transformers) |
+| PDF Parsing      | `PyPDF2`                         |
+| Interface        | Google Colab                     |
+
+
