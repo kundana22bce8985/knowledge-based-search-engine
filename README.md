@@ -1,55 +1,55 @@
-<<<<<<< HEAD
-# searchengine
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
 # knowledge-based-search-engine
-                                               
-Retrieval-Augmented Generation (RAG) System:
 
-This project implements a document-based question-answering system using **semantic search** and **LLM-powered synthesis**. Users can upload PDFs, ask natural language questions, and receive answers grounded in document context.
+## Retrieval-Augmented Generation (RAG) System
 
+This project implements a **document-based question-answering system** using **semantic search** and **LLM-powered synthesis**. Users can upload PDFs, ask natural language questions, and receive answers grounded in document context.
 
- Objective:
+---
 
-Enable intelligent search across multiple documents using:
--  Embeddings + FAISS for retrieval
--  LLM (FLAN-T5) for answer synthesis
+## Objective
 
+Enable intelligent search across multiple documents using:  
+- Embeddings + FAISS for retrieval  
+- LLM (FLAN-T5) for answer synthesis  
 
-Features:
+---
 
--  Upload and parse PDF documents
--  Chunk text with overlap for semantic coverage
--  Embed chunks using `sentence-transformers`
--  Retrieve relevant chunks using FAISS
--  Synthesize answers using `google/flan-t5-small`
--  End-to-end pipeline in Google Colab
+## Features
 
+- Upload and parse PDF documents  
+- Chunk text with overlap for semantic coverage  
+- Embed chunks using `sentence-transformers`  
+- Retrieve relevant chunks using FAISS  
+- Synthesize answers using `google/flan-t5-small`  
+- End-to-end pipeline in Google Colab  
 
- Quick Start (Google Colab):
- 
-1. Run all cells sequentially in a colab notebook.
-2 Upload your PDFs when prompted
-3. Enter your query in the final cell
-4. View retrieved chunks and synthesized answer
+---
 
-System Components and Tools 
-The system is built using several key components and tools. The embedding model used is all-MiniLM-L6-v2 from SentenceTransformers, which converts text into numerical embeddings. For vector search, the system employs FAISS with the IndexFlatL2 index to efficiently find similar embeddings. The language model (LLM) utilized is google/flan-t5-small from Transformers, responsible for generating and understanding text. PDF parsing is handled using the PyPDF2 library to extract text from PDF documents. Finally, the entire interface and workflow are implemented in Google Colab for ease of experimentation and execution.
+## Quick Start (Google Colab)
 
+1. Open `your_notebook_fixed.ipynb` in Google Colab.  
+2. Upload your PDFs when prompted.  
+3. Enter your query in the final cell.  
+4. View retrieved chunks and synthesized answer.  
 
+---
 
->>>>>>> 0f8a80732ac1d3be66ca70c3e4aad112ce7d8800
+## Flutter Demo (Optional)
+
+- A **minimal Flutter frontend** is included in `lib/main.dart`.  
+- This demo allows you to **submit queries via a simple UI**.  
+- **Note:** Core functionality resides in the Colab notebook and RAG backend; Flutter is only for demonstration.  
+- To run the demo:
+  1. Install Flutter and open the project in your IDE.  
+  2. Run `lib/main.dart`.  
+  3. Enter a query to see results displayed in the app.  
+
+---
+
+## System Components and Tools
+
+- **Embedding model:** all-MiniLM-L6-v2 from SentenceTransformers  
+- **Vector search:** FAISS with IndexFlatL2  
+- **Language model (LLM):** google/flan-t5-small from Transformers  
+- **PDF parsing:** PyPDF2  
+- **Interface:** Google Colab notebook (core), Flutter (optional demo)  
